@@ -30,10 +30,10 @@ This repository's OpenSpec specifications describe the **framework only**. Consu
 
 ## Boundaries you must respect
 
-- Do not rename, wrap, or edit vendor OpenSpec Cursor assets (`opsx-*` commands, `openspec-*` skills) to add framework methodology.
+- Do not rename, wrap, or edit vendor OpenSpec Cursor assets (`opsx-*` commands, `openspec-*` skills) to add framework methodology. Do not treat this repository as the distribution channel for those vendor files.
 - Future framework-owned Cursor assets use the `sdd-*` namespace and follow [Cursor integration](docs/architecture/cursor-integration.md), [agent system](docs/architecture/agent-system.md), and [skill system](docs/architecture/skill-system.md). Do not invent that catalog unless a later OpenSpec change specifies it.
 - Do not add an installer, custom schema, or application code unless the current change specifies it.
-- Do not couple this framework to a consuming project's runtime or production deployment.
+- Do not couple this framework to a consuming project's runtime or production deployment. Consuming projects copy/pin a published subset; they must not receive this repository's `AGENTS.md`, `README.md`, or `openspec/` as adopted baseline. Details: [adoption](docs/architecture/adoption.md).
 
 ## Config
 

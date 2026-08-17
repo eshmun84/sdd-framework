@@ -8,7 +8,7 @@ This repository is methodology and tooling. It is not an application, a product,
 
 Provide a common engineering baseline so multiple projects can use the same Spec-Driven Development lifecycle, documentation standards, governance, and Cursor-assisted workflow.
 
-Consuming projects keep their own product requirements, architecture, and source code. They do not couple this framework to production runtimes.
+Consuming projects keep their own product requirements, architecture, and source code. They take a versioned baseline by copy/pin of a controlled subset. They do not couple this framework to production runtimes.
 
 ## Principles
 
@@ -52,6 +52,6 @@ That index links to architecture, adoption, lifecycle, and governance. Working a
 
 ## Status
 
-This repository is in **foundation**. Identity, documentation architecture, Cursor asset ownership, Cursor component architecture, agent operating model, skill operating model, adoption contract, OpenSpec governance, and repository hygiene are in place.
+This repository is in **foundation**. Identity, documentation architecture, Cursor asset ownership, Cursor component architecture, agent operating model, skill operating model, adoption contract (copy/pin of a versioned subset), OpenSpec governance, and repository hygiene are in place.
 
-The Cursor component constitution, agent operating model, and skill operating model exist. A skill, agent, or command catalog does not. Those catalogs, a multi-agent implementation, and a project installer are later OpenSpec changes.
+The Cursor component constitution, agent operating model, and skill operating model exist. A skill, agent, or command catalog does not. Those catalogs, a multi-agent implementation, and a project installer are later OpenSpec changes. Vendor OpenSpec Cursor assets are obtained from OpenSpec in each repository; they are not part of the copied SDD baseline.

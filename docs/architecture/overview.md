@@ -10,8 +10,8 @@ The SDD Framework is evolved in this repository and consumed by other project re
 │     methodology, governance, docs, adoption contract         │
 │     future sdd-* Cursor assets                               │
 └────────────┬──────────────────────────────┬─────────────────┘
-             │ dogfood                      │ consume (versioned
-             │                              │ Cursor-context baseline)
+             │ dogfood                      │ consume (copy/pin
+             │                              │ versioned subset)
              ▼                              ▼
 ┌────────────────────────┐      ┌─────────────────────────────┐
 │ OpenSpec               │      │ Consuming project repos     │

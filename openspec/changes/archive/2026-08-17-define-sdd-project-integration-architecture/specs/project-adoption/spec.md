@@ -1,10 +1,4 @@
-# project-adoption Specification
-
-## Purpose
-
-Defines how consuming software projects adopt the SDD Framework as a versioned baseline copy/pin of a controlled subset without mixing product specifications or coupling runtime systems to the framework.
-
-## Requirements
+## MODIFIED Requirements
 
 ### Requirement: Consuming project ownership
 A consuming project SHALL retain ownership of its product requirements, application architecture, business domain, source code, OpenSpec lifecycle, OpenSpec specifications, project-specific Cursor extensions, and its `AGENTS.md` routing contract.
@@ -55,6 +49,8 @@ The SDD Framework SHALL NOT be coupled to a consuming project's runtime applicat
 - **WHEN** a reader consults the adoption contract for production boundaries
 - **THEN** `.cursor/`, OpenSpec artifacts, the framework documentation snapshot, and the version-pin manifest are described as development-time only
 - **AND** they are described as must-not-depend-on for production deployments
+
+## ADDED Requirements
 
 ### Requirement: Published baseline inventory
 The adoption contract SHALL name the assets that MAY be copied from this repository into a consuming project, the assets that MUST be obtained locally in the consuming project, and the assets that MUST NOT be transferred. An empty `sdd-*` catalog in this repository SHALL remain valid; absence of those files SHALL NOT require inventing stubs in order to adopt.
