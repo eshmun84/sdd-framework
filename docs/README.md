@@ -9,6 +9,7 @@ This is the documentation index for the SDD Framework.
 - [Principles](principles.md) — core working principles of the framework
 - [Architecture overview](architecture/overview.md) — four-layer relationship and Cursor asset ownership
 - [Cursor integration](architecture/cursor-integration.md) — Cursor component constitution (`AGENTS.md`, rules, skills, commands, agents)
+- [Agent system](architecture/agent-system.md) — SDD agent operating model (identity, creation criteria, boundaries, lifecycle)
 - [Project adoption](architecture/adoption.md) — how consuming projects take a versioned baseline
 - [OpenSpec lifecycle](lifecycle/openspec-workflow.md) — native change workflow used in this repository
 - [Working agreements](governance/working-agreements.md) — how framework changes are specified, reviewed, and archived

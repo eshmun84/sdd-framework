@@ -2,7 +2,7 @@
 
 This document is the authoritative Cursor **component constitution** for the SDD Framework. It defines what `AGENTS.md`, rules, skills, commands, and agents are, when each should exist, and how they relate to OpenSpec and consuming projects.
 
-It does not replace [architecture overview](overview.md) (four-layer model and asset ownership) or [OpenSpec lifecycle](../lifecycle/openspec-workflow.md) (vendor command behavior). Root entrypoints summarize or link here; they do not own a second copy.
+It does not replace [architecture overview](overview.md) (four-layer model and asset ownership), [agent system](agent-system.md) (agent operating model), or [OpenSpec lifecycle](../lifecycle/openspec-workflow.md) (vendor command behavior). Root entrypoints summarize or link here; they do not own a second copy.
 
 Absence of a framework-owned `sdd-*` catalog is valid. This page is the constitution later catalog changes must follow. It is not permission to create those files now.
 
@@ -104,6 +104,8 @@ It is **not** `AGENTS.md`. It is **not** the default Cursor Agent.
 The **parent Cursor Agent** is the orchestrator. Framework agents are **leaf specialists**. They do not supervise other SDD agents, do not own `/opsx-*`, and are not product-domain experts.
 
 Product-domain agents (for a consuming project’s business domain) stay in that project. They are not specified in this repository.
+
+When an agent is justified, what it must not own, how multi-agent work is allowed, and how agent assets are evolved are defined in [agent system](agent-system.md). That page is the operating model. This constitution does not reproduce it.
 
 ```
 User
