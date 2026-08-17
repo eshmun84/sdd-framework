@@ -32,7 +32,7 @@ Four layers stay distinct:
 
 OpenSpec-generated Cursor assets (`opsx-*`, `openspec-*`) are vendor-managed. Future framework-owned Cursor assets use `sdd-*`.
 
-Authoritative detail: [docs/architecture/overview.md](docs/architecture/overview.md). Cursor component model: [docs/architecture/cursor-integration.md](docs/architecture/cursor-integration.md). Agent operating model: [docs/architecture/agent-system.md](docs/architecture/agent-system.md). Adoption: [docs/architecture/adoption.md](docs/architecture/adoption.md).
+Authoritative detail: [docs/architecture/overview.md](docs/architecture/overview.md). Cursor component model: [docs/architecture/cursor-integration.md](docs/architecture/cursor-integration.md). Agent operating model: [docs/architecture/agent-system.md](docs/architecture/agent-system.md). Skill operating model: [docs/architecture/skill-system.md](docs/architecture/skill-system.md). Adoption: [docs/architecture/adoption.md](docs/architecture/adoption.md).
 
 ## Repository navigation
 
@@ -52,6 +52,6 @@ That index links to architecture, adoption, lifecycle, and governance. Working a
 
 ## Status
 
-This repository is in **foundation**. Identity, documentation architecture, Cursor asset ownership, Cursor component architecture, agent operating model, adoption contract, OpenSpec governance, and repository hygiene are in place.
+This repository is in **foundation**. Identity, documentation architecture, Cursor asset ownership, Cursor component architecture, agent operating model, skill operating model, adoption contract, OpenSpec governance, and repository hygiene are in place.
 
-The Cursor component constitution and agent operating model exist. A skill, agent, or command catalog does not. Those catalogs, a multi-agent implementation, and a project installer are later OpenSpec changes.
+The Cursor component constitution, agent operating model, and skill operating model exist. A skill, agent, or command catalog does not. Those catalogs, a multi-agent implementation, and a project installer are later OpenSpec changes.

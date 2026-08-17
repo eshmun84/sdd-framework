@@ -17,6 +17,7 @@ It is **not** a product codebase. Do not treat it as an application. Do not intr
 | Four-layer model and Cursor ownership | [docs/architecture/overview.md](docs/architecture/overview.md) |
 | Cursor component model | [docs/architecture/cursor-integration.md](docs/architecture/cursor-integration.md) |
 | Agent operating model | [docs/architecture/agent-system.md](docs/architecture/agent-system.md) |
+| Skill operating model | [docs/architecture/skill-system.md](docs/architecture/skill-system.md) |
 | How other repos adopt this | [docs/architecture/adoption.md](docs/architecture/adoption.md) |
 | OpenSpec workflow | [docs/lifecycle/openspec-workflow.md](docs/lifecycle/openspec-workflow.md) |
 | How to change the framework | [docs/governance/working-agreements.md](docs/governance/working-agreements.md) |
@@ -30,7 +31,7 @@ This repository's OpenSpec specifications describe the **framework only**. Consu
 ## Boundaries you must respect
 
 - Do not rename, wrap, or edit vendor OpenSpec Cursor assets (`opsx-*` commands, `openspec-*` skills) to add framework methodology.
-- Future framework-owned Cursor assets use the `sdd-*` namespace and follow [Cursor integration](docs/architecture/cursor-integration.md) and [agent system](docs/architecture/agent-system.md). Do not invent that catalog unless a later OpenSpec change specifies it.
+- Future framework-owned Cursor assets use the `sdd-*` namespace and follow [Cursor integration](docs/architecture/cursor-integration.md), [agent system](docs/architecture/agent-system.md), and [skill system](docs/architecture/skill-system.md). Do not invent that catalog unless a later OpenSpec change specifies it.
 - Do not add an installer, custom schema, or application code unless the current change specifies it.
 - Do not couple this framework to a consuming project's runtime or production deployment.
 

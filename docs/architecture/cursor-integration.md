@@ -2,7 +2,7 @@
 
 This document is the authoritative Cursor **component constitution** for the SDD Framework. It defines what `AGENTS.md`, rules, skills, commands, and agents are, when each should exist, and how they relate to OpenSpec and consuming projects.
 
-It does not replace [architecture overview](overview.md) (four-layer model and asset ownership), [agent system](agent-system.md) (agent operating model), or [OpenSpec lifecycle](../lifecycle/openspec-workflow.md) (vendor command behavior). Root entrypoints summarize or link here; they do not own a second copy.
+It does not replace [architecture overview](overview.md) (four-layer model and asset ownership), [agent system](agent-system.md) (agent operating model), [skill system](skill-system.md) (skill operating model), or [OpenSpec lifecycle](../lifecycle/openspec-workflow.md) (vendor command behavior). Root entrypoints summarize or link here; they do not own a second copy.
 
 Absence of a framework-owned `sdd-*` catalog is valid. This page is the constitution later catalog changes must follow. It is not permission to create those files now.
 
@@ -82,6 +82,8 @@ Skills are the **canonical reusable procedures**. A skill teaches how to do a me
 When a later change creates a framework-owned procedure, it is a skill under `.cursor/skills/` with an `sdd-*` name. A duplicated command file is not required to hold the same procedure text.
 
 Prefer invoking the skill with `/` when a human trigger is needed, including a skill that is only included when explicitly invoked, rather than cloning OpenSpec’s duplicated command-plus-skill files.
+
+When a skill is justified, how it is invoked, how `SKILL.md` is structured, and how skill assets are evolved are defined in [skill system](skill-system.md). That page is the operating model. This constitution does not reproduce it.
 
 ## Commands
 
