@@ -49,7 +49,9 @@ Those files keep their generated names. The framework does not rename them, wrap
 
 Future SDD Framework-owned Cursor assets use an explicit **`sdd-*` namespace** for commands, skills, rules, and agents. Framework-owned behavior is never placed in `opsx-*` or `openspec-*` files.
 
-This foundation documents the boundary only. A custom `sdd-*` catalog is a later change; its absence here is expected.
+How those primitives are classified, when each should exist, and how they interact is defined in [Cursor integration](cursor-integration.md). That page is the component constitution. This overview does not reproduce it.
+
+A custom `sdd-*` catalog is a later change; its absence is expected.
 
 ## Documentation vs specifications
 
@@ -60,4 +62,4 @@ This foundation documents the boundary only. A custom `sdd-*` catalog is a later
 | `README.md` | Human entrypoint |
 | `AGENTS.md` | AI-agent entrypoint |
 
-See [adoption](adoption.md) for how other repositories consume this baseline, and [lifecycle](../lifecycle/openspec-workflow.md) for how this repository uses OpenSpec.
+See [Cursor integration](cursor-integration.md) for the component constitution, [adoption](adoption.md) for how other repositories consume this baseline, and [lifecycle](../lifecycle/openspec-workflow.md) for how this repository uses OpenSpec.
