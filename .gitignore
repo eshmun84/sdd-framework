@@ -1,0 +1,29 @@
+# SDD Framework — technology-neutral ignores for a documentation/tooling repository.
+# Language-specific or application-stack ignores belong in consuming projects.
+
+# Operating system
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor and IDE user state (do not ignore .cursor/commands or .cursor/skills)
+.idea/
+*.swp
+*.swo
+*~
+.vscode/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Temporary files and logs
+*.log
+*.tmp
+tmp/
+temp/
+
+# Accidental key material
+*.pem
+*.key

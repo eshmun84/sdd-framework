@@ -1,0 +1,28 @@
+schema: spec-driven
+
+context: |
+  This repository is the SDD Framework: a reusable Spec-Driven Development
+  methodology and tooling baseline for multiple professional software projects.
+  It is not a product, business domain, programming language, or application.
+  Implementation work in this repository is documentation, governance, and
+  Cursor/OpenSpec assets — not application code.
+  Consuming-project product specifications do not live here.
+  Vendor OpenSpec Cursor assets (opsx-* commands, openspec-* skills) must not
+  be redefined. Future framework-owned Cursor assets use the sdd-* namespace.
+
+rules:
+  proposal:
+    - Always include a Non-goals section.
+    - Keep scope inside the SDD Framework methodology, governance, and tooling.
+    - Do not introduce consuming-project product requirements.
+  specs:
+    - Write behavioral requirements only.
+    - Do not specify a programming language, runtime, or application stack.
+    - Do not introduce consuming-project product requirements.
+  design:
+    - Record layer-boundary decisions (framework, OpenSpec, Cursor, consuming projects).
+    - Do not invent installers, custom OpenSpec schemas, or application architecture unless a dedicated change requires them.
+  tasks:
+    - Break work into small, reviewable documentation or tooling steps.
+    - Do not include application code.
+    - Do not expand into out-of-scope framework capabilities.

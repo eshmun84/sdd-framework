@@ -1,2 +1,57 @@
-# sdd-framework
-A professional Spec-Driven Development framework for AI-assisted engineering workflows. Provides reusable governance, Git workflows, agent architectures, skills, rules, and templates to standardize software development across multiple projects using tools like Cursor and OpenSpec.
+# SDD Framework
+
+A reusable Spec-Driven Development (SDD) baseline for professional software projects.
+
+This repository is methodology and tooling. It is not an application, a product, or a domain-specific system. It is independent of any programming language or application framework.
+
+## Purpose
+
+Provide a common engineering baseline so multiple projects can use the same Spec-Driven Development lifecycle, documentation standards, governance, and Cursor-assisted workflow.
+
+Consuming projects keep their own product requirements, architecture, and source code. They do not couple this framework to production runtimes.
+
+## Principles
+
+- Specify framework changes in OpenSpec before implementing them.
+- Use Cursor as the execution environment, not as a replacement for specifications.
+- Keep this repository reusable: no product, domain, or stack coupling.
+- Keep framework specifications and consuming-project specifications in separate universes.
+
+Full statement: [docs/principles.md](docs/principles.md).
+
+## Architecture
+
+Four layers stay distinct:
+
+| Layer | Role |
+|---|---|
+| **SDD Framework** (this repo) | Methodology, governance, documentation, adoption contract |
+| **OpenSpec** | Change lifecycle and specification artifacts |
+| **Cursor** | Execution of commands, skills, rules, and agents |
+| **Consuming projects** | Product specs, domain, and application code |
+
+OpenSpec-generated Cursor assets (`opsx-*`, `openspec-*`) are vendor-managed. Future framework-owned Cursor assets use `sdd-*`.
+
+Authoritative detail: [docs/architecture/overview.md](docs/architecture/overview.md). Adoption: [docs/architecture/adoption.md](docs/architecture/adoption.md).
+
+## Repository navigation
+
+| Path | What it is |
+|---|---|
+| [README.md](README.md) | Human entrypoint (this file) |
+| [AGENTS.md](AGENTS.md) | AI-agent entrypoint |
+| [docs/](docs/README.md) | Methodology documentation |
+| `openspec/` | Framework specification lifecycle |
+| `.cursor/commands/`, `.cursor/skills/` | Vendor OpenSpec Cursor assets |
+
+## Documentation
+
+Start at **[docs/README.md](docs/README.md)**.
+
+That index links to architecture, adoption, lifecycle, and governance. Working agreements and quality rules live there, not in this README.
+
+## Status
+
+This repository is in **foundation**. Identity, documentation architecture, Cursor asset ownership, adoption contract, OpenSpec governance, and repository hygiene are in place.
+
+It is not yet a complete skill catalog, multi-agent system, or project installer. Those are later OpenSpec changes.
