@@ -14,3 +14,4 @@ This is the documentation index for the SDD Framework.
 - [Project adoption](architecture/adoption.md) — copy/pin adoption contract for consuming projects
 - [OpenSpec lifecycle](lifecycle/openspec-workflow.md) — native change workflow used in this repository
 - [Working agreements](governance/working-agreements.md) — how framework changes are specified, reviewed, and archived
+- [Human-AI interaction](practices/human-ai-interaction.md) — how humans communicate intent to AI tools without treating prompts as specifications

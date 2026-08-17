@@ -10,7 +10,7 @@ Authoritative command behavior lives in the vendor-managed Cursor assets (`opsx-
 explore → propose → apply → sync → archive
 ```
 
-This is a typical orientation, not a mandatory OpenSpec execution sequence.
+This is a typical orientation, not a mandatory OpenSpec execution sequence. Prompts initiate lifecycle work; they are not specifications. How humans write those prompts is defined in [human-AI interaction](../practices/human-ai-interaction.md).
 
 | Stage | Purpose |
 |---|---|

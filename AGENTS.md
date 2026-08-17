@@ -20,6 +20,7 @@ It is **not** a product codebase. Do not treat it as an application. Do not intr
 | Skill operating model | [docs/architecture/skill-system.md](docs/architecture/skill-system.md) |
 | How other repos adopt this | [docs/architecture/adoption.md](docs/architecture/adoption.md) |
 | OpenSpec workflow | [docs/lifecycle/openspec-workflow.md](docs/lifecycle/openspec-workflow.md) |
+| Human-AI interaction | [docs/practices/human-ai-interaction.md](docs/practices/human-ai-interaction.md) |
 | How to change the framework | [docs/governance/working-agreements.md](docs/governance/working-agreements.md) |
 
 ## How OpenSpec is used

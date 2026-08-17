@@ -32,7 +32,7 @@ Four layers stay distinct:
 
 OpenSpec-generated Cursor assets (`opsx-*`, `openspec-*`) are vendor-managed. Future framework-owned Cursor assets use `sdd-*`.
 
-Authoritative detail: [docs/architecture/overview.md](docs/architecture/overview.md). Cursor component model: [docs/architecture/cursor-integration.md](docs/architecture/cursor-integration.md). Agent operating model: [docs/architecture/agent-system.md](docs/architecture/agent-system.md). Skill operating model: [docs/architecture/skill-system.md](docs/architecture/skill-system.md). Adoption: [docs/architecture/adoption.md](docs/architecture/adoption.md).
+Authoritative detail: [docs/architecture/overview.md](docs/architecture/overview.md). Cursor component model: [docs/architecture/cursor-integration.md](docs/architecture/cursor-integration.md). Agent operating model: [docs/architecture/agent-system.md](docs/architecture/agent-system.md). Skill operating model: [docs/architecture/skill-system.md](docs/architecture/skill-system.md). Adoption: [docs/architecture/adoption.md](docs/architecture/adoption.md). Human-AI interaction practice: [docs/practices/human-ai-interaction.md](docs/practices/human-ai-interaction.md).
 
 ## Repository navigation
 
@@ -48,10 +48,10 @@ Authoritative detail: [docs/architecture/overview.md](docs/architecture/overview
 
 Start at **[docs/README.md](docs/README.md)**.
 
-That index links to architecture, adoption, lifecycle, and governance. Working agreements and quality rules live there, not in this README.
+That index links to architecture, adoption, lifecycle, governance, and practices. Working agreements and quality rules live there, not in this README.
 
 ## Status
 
-This repository is in **foundation**. Identity, documentation architecture, Cursor asset ownership, Cursor component architecture, agent operating model, skill operating model, adoption contract (copy/pin of a versioned subset), OpenSpec governance, and repository hygiene are in place.
+This repository is in **foundation**. Identity, documentation architecture, Cursor asset ownership, Cursor component architecture, agent operating model, skill operating model, adoption contract (copy/pin of a versioned subset), human-AI interaction practice, OpenSpec governance, and repository hygiene are in place.
 
-The Cursor component constitution, agent operating model, and skill operating model exist. A skill, agent, or command catalog does not. Those catalogs, a multi-agent implementation, and a project installer are later OpenSpec changes. Vendor OpenSpec Cursor assets are obtained from OpenSpec in each repository; they are not part of the copied SDD baseline.
+The Cursor component constitution, agent operating model, skill operating model, and human-AI interaction practice exist. A skill, agent, or command catalog does not. Prompt libraries and prompt template catalogs are not part of the framework. Those catalogs, a multi-agent implementation, and a project installer are later OpenSpec changes. Vendor OpenSpec Cursor assets are obtained from OpenSpec in each repository; they are not part of the copied SDD baseline.

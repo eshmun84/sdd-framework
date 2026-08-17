@@ -55,6 +55,8 @@ How SDD agents are justified, what they must not own, and how they are evolved i
 
 How SDD skills are justified, invoked, structured, and evolved is defined in [skill system](skill-system.md). That page is the operating model. This overview does not reproduce it.
 
+How humans communicate intent to AI tools is defined in [human-AI interaction](../practices/human-ai-interaction.md). That page is a practice, not a fifth architecture layer. This overview does not reproduce it.
+
 A custom `sdd-*` catalog is a later change; its absence is expected.
 
 ## Documentation vs specifications
@@ -66,4 +68,4 @@ A custom `sdd-*` catalog is a later change; its absence is expected.
 | `README.md` | Human entrypoint |
 | `AGENTS.md` | AI-agent entrypoint |
 
-See [Cursor integration](cursor-integration.md) for the component constitution, [agent system](agent-system.md) for the agent operating model, [skill system](skill-system.md) for the skill operating model, [adoption](adoption.md) for how other repositories consume this baseline, and [lifecycle](../lifecycle/openspec-workflow.md) for how this repository uses OpenSpec.
+See [Cursor integration](cursor-integration.md) for the component constitution, [agent system](agent-system.md) for the agent operating model, [skill system](skill-system.md) for the skill operating model, [adoption](adoption.md) for how other repositories consume this baseline, [lifecycle](../lifecycle/openspec-workflow.md) for how this repository uses OpenSpec, and [human-AI interaction](../practices/human-ai-interaction.md) for how humans instruct AI tools.
