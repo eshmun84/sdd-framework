@@ -2,7 +2,7 @@
 
 This document is the authoritative Cursor **component constitution** for the SDD Framework. It defines what `AGENTS.md`, rules, skills, commands, and agents are, when each should exist, and how they relate to OpenSpec and consuming projects.
 
-It does not replace [architecture overview](overview.md) (four-layer model and asset ownership), [agent system](agent-system.md) (agent operating model), [skill system](skill-system.md) (skill operating model), or [OpenSpec lifecycle](../lifecycle/openspec-workflow.md) (vendor command behavior). Root entrypoints summarize or link here; they do not own a second copy.
+It does not replace [architecture overview](overview.md) (four-layer model and asset ownership), [agent system](agent-system.md) (agent operating model), [skill system](skill-system.md) (skill operating model), [rule system](rule-system.md) (rule operating model), or [OpenSpec lifecycle](../lifecycle/openspec-workflow.md) (vendor command behavior). Root entrypoints summarize or link here; they do not own a second copy.
 
 Absence of a framework-owned `sdd-*` catalog is valid. This page is the constitution later catalog changes must follow. It is not permission to create those files now.
 
@@ -72,8 +72,9 @@ When a later change creates framework-owned rules:
 
 - Live under `.cursor/rules/` with `sdd-*` names.
 - State a constraint. Point at the authoritative `docs/` page. Do not copy that page into the rule.
-- Prefer glob-scoped rules (for example, conventions that apply when editing `openspec/` or `docs/`).
-- Always-apply rules are **exceptional**. `AGENTS.md` remains the default always-on identity surface. An always-apply rule is justified only when `AGENTS.md` cannot keep that constraint short.
+- Prefer glob-scoped rules. Always-apply rules are **exceptional**. `AGENTS.md` remains the default always-on identity surface. An always-apply rule is justified only when `AGENTS.md` cannot keep that constraint short.
+
+When a rule is justified, how it is activated, how `.mdc` files are structured, and how rule assets are evolved are defined in [rule system](rule-system.md). That page is the operating model. This constitution does not reproduce it.
 
 ## Skills
 

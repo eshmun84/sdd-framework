@@ -6,7 +6,7 @@
 Thumbs.db
 Desktop.ini
 
-# Editor and IDE user state (do not ignore .cursor/commands, .cursor/skills, or .cursor/agents)
+# Editor and IDE user state (do not ignore .cursor/commands, .cursor/skills, .cursor/agents, or .cursor/rules)
 .idea/
 *.swp
 *.swo
