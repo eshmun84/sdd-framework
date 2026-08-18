@@ -4,7 +4,7 @@ This document is the authoritative **asset lifecycle operating model** for the S
 
 It does not replace [architecture overview](overview.md) (four-layer model), [Cursor integration](cursor-integration.md) (what a rule, skill, command, or agent *is*), [agent system](agent-system.md), [skill system](skill-system.md), [rule system](rule-system.md), [workflow system](workflow-system.md) (change collaboration), [adoption](adoption.md) (copy/pin distribution), [OpenSpec lifecycle](../lifecycle/openspec-workflow.md), or [human-AI interaction](../practices/human-ai-interaction.md) (prompt promotion). Those pages keep their jobs. This page is how framework-owned Cursor files evolve across them. It is not a fifth architecture layer.
 
-This page does not create `.cursor/` assets, an `sdd-*` catalog, templates, examples, an installer, a manifest, or release automation. Absence of those files is valid. Lifecycle definition precedes catalog creation. It is not permission to wrap `/opsx-*`.
+This page does not create Cursor assets, an `sdd-*` catalog, a planned-name inventory, templates, examples, an installer, a manifest, or release automation. Absence of `sdd-*` files is a valid complete published state. It is not permission to wrap `/opsx-*`.
 
 ## Identity
 
@@ -12,12 +12,14 @@ An SDD Framework asset is a **framework-owned Cursor reusable primitive** in the
 
 Supported categories:
 
-| Category | Path when it exists | Type model |
-|---|---|---|
-| Rule | `.cursor/rules/sdd-*` | [Rule system](rule-system.md) |
-| Skill | `.cursor/skills/sdd-*` | [Skill system](skill-system.md) |
-| Agent | `.cursor/agents/sdd-*` | [Agent system](agent-system.md) |
-| Optional command | `.cursor/commands/sdd-*` | [Cursor integration](cursor-integration.md) (thin trigger) |
+| Category | Source path (this repository) | Installed path (after copy/pin) | Type model |
+|---|---|---|---|
+| Rule | `assets/cursor/rules/sdd-*` | `.cursor/rules/sdd-*` | [Rule system](rule-system.md) |
+| Skill | `assets/cursor/skills/sdd-*` | `.cursor/skills/sdd-*` | [Skill system](skill-system.md) |
+| Agent | `assets/cursor/agents/sdd-*` | `.cursor/agents/sdd-*` | [Agent system](agent-system.md) |
+| Optional command | `assets/cursor/commands/sdd-*` | `.cursor/commands/sdd-*` | [Cursor integration](cursor-integration.md) (thin trigger) |
+
+Source files are authored under `assets/cursor/`. Cursor loads installed files from project-root `.cursor/` after copy/pin. This repository does not install published `sdd-*` files into its own `.cursor/` tree. A primitive directory under `assets/cursor/` exists only when at least one published file of that primitive exists.
 
 A command is a **dependent asset**. It exists only as an optional thin trigger for a canonical skill, shares that skill's `sdd-*` name, and is never proposed alone. Deprecating or retiring the skill includes the command. Command meaning stays in the constitution; this page does not reopen it.
 
@@ -134,7 +136,7 @@ Do not create `/sdd-publish`, `/sdd-validate`, `/sdd-retire`, or any `sdd-*` com
 | **Need** | An observed pattern | Classified or discarded | None required |
 | **Classify** | The need is framework-shaped | A home is chosen, or the need is dropped | Understanding; maybe a docs-only or spec-only change |
 | **Propose** | A human asks to create a change for an asset | Human-accepted OpenSpec artifacts that record type justification and repetition evidence | OpenSpec change artifacts |
-| **Implement** | A human asks to apply an **approved** change | The file exists in this repository matching the contract | `.cursor/**/sdd-*` for that change |
+| **Implement** | A human asks to apply an **approved** change | The file exists in this repository matching the contract | `assets/cursor/**/sdd-*` for that change |
 | **Validate** | Implementation is claimed done | Review findings accepted | Findings against the contract |
 | **Publish** | The creating change is archived | The asset sits in a published-inventory path | Eligibility for copy/pin |
 | **Adopt** | A project takes or updates a baseline | Copied files present; pin recorded | Project-side copy; still framework-owned |
@@ -142,7 +144,7 @@ Do not create `/sdd-publish`, `/sdd-validate`, `/sdd-retire`, or any `sdd-*` com
 | **Deprecate** | Removal or breaking replacement is planned | The file is marked and remains available | OpenSpec change + notice in docs and the file |
 | **Retire** | The deprecation transition is complete | The file is gone from the published subset | Removal change archived |
 
-**Publish is not archive.** Archive makes `openspec/specs/` durable. Publish means the archived asset is eligible for the published subset. Git tags remain the baseline identifier in [adoption](adoption.md). This operating model does not require tags, releases, or publication tooling to exist.
+**Publish is not archive.** Archive makes `openspec/specs/` durable. Publish means the archived asset in `assets/cursor/` is eligible for the published subset. Git tags remain the baseline identifier in [adoption](adoption.md). This operating model does not require tags, releases, or publication tooling to exist.
 
 Observation alone does not require an OpenSpec change. Implement begins only after a human has accepted the contract. Do not write the Cursor file from classification or chat history.
 
@@ -212,10 +214,14 @@ Creating, changing, deprecating, or retiring a framework-owned asset requires an
 - **Retirement** is a later OpenSpec change that removes the asset from the published subset. A consuming project's next baseline update drops the file as part of replacing framework-owned copied assets. Keeping a retired `sdd-*` name after that update would be a fork of a reserved prefix.
 - An asset that was **never eligible** for the published subset may be removed by an OpenSpec change without a prior deprecation period. Silent deletion is still forbidden.
 
-## Catalog status
+## Publication policy
 
-This operating model does not require any `sdd-*` rule, skill, command, or agent file to exist. Empty stubs are not a catalog. The first framework-owned Cursor assets are a later OpenSpec change that must follow this lifecycle.
+A published framework baseline **may contain zero** framework-owned `sdd-*` Cursor files. Methodology, architecture, and OpenSpec governance are sufficient. Publishing a baseline does not require Cursor assets. Absence of those files is not an incomplete implementation and is not unfinished foundation work.
+
+There is **no planned-name catalog**. Do not create a catalog document, a backlog of `sdd-*` names, or empty stubs so a catalog appears populated. The inventory is the `sdd-*` files that exist under `assets/cursor/` plus the path patterns in [adoption](adoption.md). This repository's `.cursor/` is not the published inventory. Example `sdd-*` names elsewhere in architecture docs are naming illustrations, not creation intent.
+
+Each later `sdd-*` file is its own OpenSpec change that follows this lifecycle (classification, evidence of repetition, human acceptance). One change may create a skill and its optional command. A change must not create a catalog of assets.
 
 This page does not introduce an installer, synchronization tool, manifest, release automation, workflow engine, asset-management runtime, MCP integration, hook, plugin, template catalog, or example assets.
 
-Humans invoke OpenSpec stages. Cursor executes assets. Later catalog changes create files; this change does not.
+Humans invoke OpenSpec stages. Cursor executes assets when those files exist.

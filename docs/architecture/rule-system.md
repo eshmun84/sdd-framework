@@ -153,7 +153,8 @@ After archive, adopted copies participate in the existing versioned baseline: th
 
 When a later change creates a framework-owned rule:
 
-- Path: `.cursor/rules/sdd-<concern>.mdc` in the **project** Cursor tree.
+- Source path: `assets/cursor/rules/sdd-<concern>.mdc` in this repository.
+- Installed path: `.cursor/rules/sdd-<concern>.mdc` in the consuming project's Cursor tree after copy/pin.
 - Not distributed as a user-level rule (`~/.cursor/rules/`).
 - Not homed in Cursor team-dashboard rules or nested `RULE.md` files in content trees as the framework location.
 - Frontmatter records `description` and the chosen activation (`globs`, or exceptional `alwaysApply`).
@@ -172,7 +173,7 @@ This operating model does not define a catalog of consuming-project rules. A man
 
 ## Adoption
 
-`.cursor/rules/sdd-*` is already in the published baseline inventory when those files exist. This operating model does not change that inventory.
+`assets/cursor/rules/sdd-*` is the published source inventory when those files exist. After copy/pin they land at `.cursor/rules/sdd-*`. This operating model does not change that inventory.
 
 Copied `sdd-*` rules remain **framework-owned**. A consuming project receives them through versioned copy/pin, replaces them on update, and must not fork them in place. Project-named rules sit beside them under other names.
 
@@ -180,6 +181,6 @@ Every `sdd-*` rule must remain correct after that copy. Dogfood that is only tru
 
 ## Catalog status
 
-This operating model does not require any `sdd-*` rule file or `.cursor/rules/` directory to exist. Empty stubs are not a catalog. The first framework-owned rules are a later OpenSpec change.
+This operating model does not require any additional `sdd-*` rule file or empty `assets/cursor/rules/` placeholder directory beyond files required by other capabilities. Empty stubs are not a catalog.
 
 The Cursor constitution uses `sdd-spec-authoring` as a **non-normative** naming example of how `sdd-<concern>` might look. It is not an asset to create in this change, not a glob design, and not a catalog entry. This page does not add further rule names.

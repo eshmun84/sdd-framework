@@ -6,7 +6,9 @@
 Thumbs.db
 Desktop.ini
 
-# Editor and IDE user state (do not ignore .cursor/commands, .cursor/skills, .cursor/agents, or .cursor/rules)
+# Editor and IDE user state (do not ignore assets/cursor/, .cursor/commands, or .cursor/skills)
+# assets/cursor/ is the published sdd-* source when those files exist.
+# This repository's .cursor/ holds vendor OpenSpec assets, not the published sdd-* tree.
 .idea/
 *.swp
 *.swo

@@ -105,7 +105,8 @@ Typical orientation (not a mandatory command sequence): explore → propose → 
 
 When a later change creates a framework-owned agent:
 
-- Path: `.cursor/agents/sdd-<role>.md` in the **project** Cursor tree.
+- Source path: `assets/cursor/agents/sdd-<role>.md` in this repository.
+- Installed path: `.cursor/agents/sdd-<role>.md` in the consuming project's Cursor tree after copy/pin.
 - Not distributed as a user-level agent (`~/.cursor/agents/`).
 - Not homed in `.claude/agents/` or `.codex/agents/` as the framework location.
 - Configured so it cannot edit files or run state-changing shell commands unless that later change justifies writes.
@@ -122,7 +123,7 @@ A mandatory product prefix is not required by this operating model. See [Cursor 
 
 ## Catalog status
 
-This operating model does not require any `sdd-*` agent file or `.cursor/agents/` directory to exist. Empty stubs are not a catalog. The first framework-owned agents are a later OpenSpec change.
+This operating model does not require any `sdd-*` agent file or `assets/cursor/agents/` directory to exist. Empty stubs are not a catalog. The first framework-owned agents are a later OpenSpec change.
 
 The following names are **non-normative examples** of how `sdd-<role>` might look. They are not assets to create in this change:
 

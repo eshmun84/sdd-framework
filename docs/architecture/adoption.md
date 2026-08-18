@@ -10,18 +10,22 @@ Manual copy of the published subset is valid until a later change automates the 
 
 ## Official model
 
+This repository is the **source** of the published subset. It is not an installed consuming project and does not keep published `sdd-*` files under its own `.cursor/` tree.
+
 ```
 sdd-framework @ git tag
+  assets/cursor/**/sdd-*    source (copy FROM)
+  docs/                     canonical methodology
         │
-        │  published subset (not the whole repository)
+        │  copy/pin of the published subset
         ▼
 consuming project
-  .cursor/**/sdd-*          framework-owned after copy
+  .cursor/**/sdd-*          installed load path (copy TO)
   docs/sdd-framework/       methodology snapshot
   sdd-manifest.yaml         version pin (contract; not created here)
 ```
 
-The adopted unit is that subset, not `sdd-framework` as a whole. Cursor loads project-root `.cursor/`. A nested clone is not a Cursor load path.
+The adopted unit is that subset, not `sdd-framework` as a whole. Cursor loads project-root `.cursor/` in the consuming project. `assets/cursor/` is not a Cursor load path. A nested clone is not a Cursor load path.
 
 Rejected as the Cursor-asset channel:
 
@@ -36,7 +40,7 @@ Rejected as the Cursor-asset channel:
 |---|---|---|
 | Methodology requirements | Owns (`openspec/specs/`) | Does not import them as product specs |
 | Canonical methodology prose | Owns (`docs/`) | Read-only snapshot at `docs/sdd-framework/` |
-| `sdd-*` Cursor assets | Source of truth | Copied; remain **framework-owned** |
+| `sdd-*` Cursor assets | Source of truth (`assets/cursor/`) | Copied into `.cursor/`; remain **framework-owned** |
 | `opsx-*` / `openspec-*` | Vendor (OpenSpec in this repo) | Vendor (OpenSpec in **that** repo) |
 | `AGENTS.md` | Router for the framework repo | Router for the **product** repo |
 | Product domain, specs, code | Forbidden | Owns |
@@ -50,15 +54,17 @@ This repository's `AGENTS.md` and `README.md` are **never copied verbatim**. A c
 
 ## Published baseline inventory
 
-Absence of a `sdd-*` catalog in this repository is valid. Do not invent stubs in order to adopt.
+A published baseline with the methodology snapshot and zero `sdd-*` Cursor files is complete. Do not invent stubs in order to adopt. Missing `sdd-*` files are not an adoption defect.
 
-**May be copied** (when the files exist):
+**May be copied** (when the files exist in the source tree):
 
-- `.cursor/rules/sdd-*`
-- `.cursor/skills/sdd-*`
-- `.cursor/agents/sdd-*`
-- `.cursor/commands/sdd-*`
+- `assets/cursor/rules/sdd-*`
+- `assets/cursor/skills/sdd-*`
+- `assets/cursor/agents/sdd-*`
+- `assets/cursor/commands/sdd-*`
 - methodology snapshot into the consuming project's `docs/sdd-framework/`
+
+Those Cursor files land at the matching primitive path under the consuming project's `.cursor/`. This repository's `.cursor/` is not the copy FROM inventory.
 
 **Obtained locally in the consuming project (not copied from here):**
 
@@ -79,7 +85,7 @@ OpenSpec vendor Cursor assets (`opsx-*` commands, `openspec-*` skills) are **not
 
 ## Cursor landing paths
 
-Copied framework-owned Cursor assets land in the consuming project's **project-root** `.cursor/` tree, in the primitive-matched paths reserved for `sdd-*`. See [Cursor integration](cursor-integration.md) for reserved prefixes. Nested vendor directories are not a valid Cursor load path.
+Copied framework-owned Cursor assets land in the consuming project's **project-root** `.cursor/` tree, in the primitive-matched paths reserved for `sdd-*`. That tree is the installed Cursor load path. It is not the framework source tree. See [Cursor integration](cursor-integration.md) for reserved prefixes. Nested vendor directories and `assets/cursor/` in the consuming project are not valid Cursor load paths.
 
 Canonical methodology stays under this repository's `docs/`. In a consuming project, a methodology snapshot lands at `docs/sdd-framework/`. That subtree is reserved. It is not product architecture and must not be merged into the product documentation root as if it were.
 
@@ -134,7 +140,7 @@ discover → adopt → configure → develop → update
 | Stage | Intent |
 |---|---|
 | **Discover** | Read this contract; choose a framework version (git tag). |
-| **Adopt** | Copy the published subset into project-root Cursor paths and `docs/sdd-framework/`; record the pin. |
+| **Adopt** | Copy FROM `assets/cursor/**/sdd-*` into the consuming project's project-root `.cursor/` paths, copy the methodology snapshot to `docs/sdd-framework/`, and record the pin. |
 | **Configure** | Write a project-owned `AGENTS.md`; initialize product OpenSpec locally; add project Cursor extensions outside reserved prefixes. |
 | **Develop** | Product work through that project's OpenSpec lifecycle. Copied `sdd-*` assets stay read-only. |
 | **Update** | Take a newer tag; replace framework-owned copied paths; review the diff; update the pin. |

@@ -81,12 +81,13 @@ Creating, changing, or deprecating a framework-owned agent SHALL require an Open
 - **AND** it does not permit silent deletion as the deprecation path
 
 ### Requirement: Future agent files match the project subagent contract
-When a later change creates a framework-owned agent, that file SHALL live at `.cursor/agents/sdd-<role>.md` in the project Cursor tree. It SHALL NOT be distributed as a user-level agent. It SHALL be configured so it cannot edit files or run state-changing shell commands unless a later OpenSpec change justifies write access. It SHALL use the parent agent's model unless a later OpenSpec change specifies otherwise. The file body SHALL encode specialist stance and forbidden ownership and SHALL point at authoritative `docs/` rather than republishing methodology.
+When a later change creates a framework-owned agent, that file SHALL be authored at `assets/cursor/agents/sdd-<role>.md` in this repository's source tree. After copy/pin, the installed file SHALL live at `.cursor/agents/sdd-<role>.md` in the consuming project's Cursor tree. It SHALL NOT be distributed as a user-level agent. It SHALL be configured so it cannot edit files or run state-changing shell commands unless a later OpenSpec change justifies write access. It SHALL use the parent agent's model unless a later OpenSpec change specifies otherwise. The file body SHALL encode specialist stance and forbidden ownership and SHALL point at authoritative `docs/` rather than republishing methodology.
 
-#### Scenario: Planned agent has a project path and sdd name
+#### Scenario: Planned agent has a source path and sdd name
 - **WHEN** a contributor plans a framework-owned agent
-- **THEN** documentation requires the path `.cursor/agents/sdd-<role>.md`
-- **AND** it forbids placing that agent in a user-level agent directory or in a non-`.cursor/` compatibility directory as the framework home
+- **THEN** documentation requires the source path `assets/cursor/agents/sdd-<role>.md`
+- **AND** it requires the installed path `.cursor/agents/sdd-<role>.md` after copy/pin
+- **AND** it forbids placing that agent in a user-level agent directory or in a non-`.cursor/` compatibility directory as the installed home
 
 #### Scenario: Review agents do not write by default
 - **WHEN** documentation describes the default write policy for framework agents
@@ -114,6 +115,7 @@ Consuming-project agents SHALL use names outside `opsx-*`, `openspec-*`, and `sd
 This capability SHALL define the agent operating model without requiring any framework-owned `sdd-*` agent file to exist.
 
 #### Scenario: Architecture change adds no agents
-- **WHEN** this change is applied
-- **THEN** no `.cursor/agents/` directory or `sdd-*` agent file is required to exist
+- **WHEN** this operating model is applied without a per-asset agent change
+- **THEN** no `assets/cursor/agents/` directory or `sdd-*` agent file is required to exist
 - **AND** the documented operating model is sufficient for later changes to add agents
+- **AND** empty placeholder agent directories are not required

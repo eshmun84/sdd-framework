@@ -1,0 +1,18 @@
+---
+description: Do not implement repository work that is not in an approved OpenSpec change in this project's workspace.
+alwaysApply: true
+---
+
+# Spec First
+
+Do not implement repository work unless it is specified by an approved OpenSpec change in this repository's OpenSpec workspace. If this repository has no OpenSpec workspace yet, still do not implement unspecified work from the prompt.
+
+A prompt and chat history are not the specification.
+
+If behavior would still matter after this conversation and is not already specified, record it through the existing OpenSpec change lifecycle. Do not apply it from the prompt.
+
+Implementing work that is already in an approved OpenSpec change in this repository's workspace is allowed.
+
+This file reminds that existing contract. OpenSpec specifications remain the source of truth.
+
+Authoritative methodology (page titles, not this file): Principles, Workflow system, Human-AI interaction, OpenSpec lifecycle. Documentation root is `docs/` here and `docs/sdd-framework/` after copy/pin of the SDD Framework baseline.

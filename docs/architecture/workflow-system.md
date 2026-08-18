@@ -34,6 +34,7 @@ Standing assignment of truth:
 
 - **Prompt** = session instruction
 - **OpenSpec** = durable requirement contract
+- **Git** = history of landed change work (not a specification)
 - **Cursor** = execution environment
 - **Docs** = methodology explanation
 - **Skills / rules / agents** = reusable framework assets when they later exist
@@ -138,6 +139,18 @@ If a sentence would still matter after the conversation ends, it does not belong
 | Chat clarifications that did not change the contract | Implementation that matches the contract; main specs after sync or archive |
 
 How to write the session instruction is defined in [human-AI interaction](../practices/human-ai-interaction.md). This page does not restate that practice.
+
+## Git ↔ OpenSpec traceability
+
+Git is the history of change work that has landed in the repository. It is not a fifth architecture layer. OpenSpec remains the durable requirement contract. Git history and commit messages are not specifications.
+
+When Git work is associated with an OpenSpec change in the **current** repository's OpenSpec workspace, that work must be attributable to that change. A reader of the commit must be able to identify the change. Propose, apply, sync, and archive artifacts for a change are change-related work.
+
+A single commit must not contain work that belongs to more than one OpenSpec change. Record that work in separate commits, each attributable to one change.
+
+Not every commit must reference an OpenSpec change. Commits that do not contain change-related work still must not be treated as a specification.
+
+This page does not specify commit-message grammar, Conventional Commits, branching, hooks, Git tooling, or Git procedure (staging, rebase, squash, push, pull request). Attribution is the observable association to the change in this workspace; exact placement in the message is not specified.
 
 ## Human approval gates
 

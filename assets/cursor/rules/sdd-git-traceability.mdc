@@ -1,0 +1,18 @@
+---
+description: Git work for an OpenSpec change must be attributable to that change; do not mix changes; Git is not the specification.
+alwaysApply: true
+---
+
+# Git Traceability
+
+Git work associated with an OpenSpec change in this repository's OpenSpec workspace must be attributable to that change. A reader of the commit must be able to identify the change.
+
+A single commit must not contain work that belongs to more than one OpenSpec change.
+
+Git history is not the specification. OpenSpec remains the requirement contract. If this repository has no OpenSpec workspace yet, still do not treat commit messages as the specification.
+
+Committing propose, apply, sync, or archive work for a change is allowed when that commit is attributable to that change. Not every commit must name a change.
+
+This file reminds that existing contract. OpenSpec specifications remain the source of truth.
+
+Authoritative methodology (page titles, not this file): Workflow system. Documentation root is `docs/` here and `docs/sdd-framework/` after copy/pin of the SDD Framework baseline.

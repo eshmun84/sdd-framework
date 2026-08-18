@@ -41,8 +41,9 @@ Authoritative detail: [docs/architecture/overview.md](docs/architecture/overview
 | [README.md](README.md) | Human entrypoint (this file) |
 | [AGENTS.md](AGENTS.md) | AI-agent entrypoint |
 | [docs/](docs/README.md) | Methodology documentation |
+| `assets/cursor/` | Published `sdd-*` Cursor-asset source (when files exist) |
 | `openspec/` | Framework specification lifecycle |
-| `.cursor/commands/`, `.cursor/skills/` | Vendor OpenSpec Cursor assets |
+| `.cursor/commands/`, `.cursor/skills/` | Vendor OpenSpec Cursor assets (local installation; not the published SDD subset) |
 
 ## Documentation
 
@@ -54,4 +55,4 @@ That index links to architecture, adoption, lifecycle, governance, and practices
 
 This repository is in **foundation**. Identity, documentation architecture, Cursor asset ownership, Cursor component architecture, agent operating model, skill operating model, rule operating model, workflow operating model, asset lifecycle operating model, adoption contract (copy/pin of a versioned subset), human-AI interaction practice, OpenSpec governance, and repository hygiene are in place.
 
-The Cursor component constitution, agent operating model, skill operating model, rule operating model, workflow operating model, asset lifecycle operating model, and human-AI interaction practice exist. A skill, agent, command, or rule catalog does not. Prompt libraries and prompt template catalogs are not part of the framework. Those catalogs, a multi-agent implementation, and a project installer are later OpenSpec changes. Vendor OpenSpec Cursor assets are obtained from OpenSpec in each repository; they are not part of the copied SDD baseline.
+The published Cursor subset may be empty. That absence is not remaining foundation work. Prompt libraries and prompt template catalogs are not part of the framework. A project installer, if needed, is a later OpenSpec change. Vendor OpenSpec Cursor assets are obtained from OpenSpec in each repository; they are not part of the copied SDD baseline.

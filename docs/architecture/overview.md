@@ -8,16 +8,17 @@ The SDD Framework is evolved in this repository and consumed by other project re
 ┌─────────────────────────────────────────────────────────────┐
 │                  SDD Framework (this repo)                   │
 │     methodology, governance, docs, adoption contract         │
-│     future sdd-* Cursor assets                               │
+│     sdd-* source under assets/cursor/ when those files exist │
 └────────────┬──────────────────────────────┬─────────────────┘
-             │ dogfood                      │ consume (copy/pin
-             │                              │ versioned subset)
-             ▼                              ▼
+             │ OpenSpec lifecycle            │ consume (copy/pin
+             │ (this repo)                   │ FROM assets/cursor/
+             ▼                               ▼
 ┌────────────────────────┐      ┌─────────────────────────────┐
 │ OpenSpec               │      │ Consuming project repos     │
 │ change lifecycle       │      │ product specs, domain, code │
 │ specs, deltas, archive │      │ own OpenSpec workspace      │
-└────────────────────────┘      └──────────────┬──────────────┘
+└────────────────────────┘      │ .cursor/**/sdd-* installed  │
+                                └──────────────┬──────────────┘
                                                │ execute
                                                ▼
                                     ┌─────────────────────┐
@@ -45,9 +46,9 @@ OpenSpec-generated Cursor assets are **vendor-managed**:
 - Commands named `opsx-*` in `.cursor/commands/`
 - Skills named `openspec-*` in `.cursor/skills/`
 
-Those files keep their generated names. The framework does not rename them, wrap them, or mix SDD methodology into them. OpenSpec CLI upgrades may regenerate them.
+Those files keep their generated names. The framework does not rename them, wrap them, or mix SDD methodology into them. OpenSpec CLI upgrades may regenerate them. They live in this repository's `.cursor/` as a local vendor installation, not as published SDD source.
 
-Future SDD Framework-owned Cursor assets use an explicit **`sdd-*` namespace** for commands, skills, rules, and agents. Framework-owned behavior is never placed in `opsx-*` or `openspec-*` files.
+Framework-owned `sdd-*` assets are authored under `assets/cursor/` and copied into a consuming project's `.cursor/` on adopt. This repository does not install those published files into its own `.cursor/` tree. Framework-owned behavior is never placed in `opsx-*` or `openspec-*` files.
 
 How those primitives are classified, when each should exist, and how they interact is defined in [Cursor integration](cursor-integration.md). That page is the component constitution. This overview does not reproduce it.
 
@@ -63,13 +64,14 @@ How humans, optional planning assistants, Cursor, OpenSpec, and implementation c
 
 How framework-owned Cursor assets are classified, created, published, adopted, and retired is defined in [asset lifecycle](asset-lifecycle.md). That page is an operating model, not a fifth architecture layer. This overview does not reproduce it.
 
-A custom `sdd-*` catalog is a later change; its absence is expected.
+A published baseline may contain zero `sdd-*` files. That absence is expected and complete. There is no planned `sdd-*` catalog.
 
 ## Documentation vs specifications
 
 | Location | Role |
 |---|---|
 | `docs/` | Human- and agent-readable methodology |
+| `assets/cursor/` | Published `sdd-*` Cursor-asset source (when files exist) |
 | `openspec/specs/` | Requirement contract for the framework (after archive) |
 | `README.md` | Human entrypoint |
 | `AGENTS.md` | AI-agent entrypoint |

@@ -72,7 +72,7 @@ Do not put step-by-step methods in rules. Do not put always-on constraints in sk
 
 The **skill** is the canonical procedure. A **command**, if it exists, is an optional thin trigger that shares the same `sdd-*` name and does not duplicate procedure text.
 
-A procedure alone is not a reason to add a command. This architecture does not require `.cursor/commands/sdd-*`. Prefer invoking the skill with `/` rather than cloning OpenSpec’s duplicated command-plus-skill files.
+A procedure alone is not a reason to add a command. This architecture does not require `assets/cursor/commands/sdd-*` or `.cursor/commands/sdd-*` to exist. If a later change creates a dependent command, its source path is `assets/cursor/commands/sdd-*` and its installed path is `.cursor/commands/sdd-*`. Do not create that source directory until such a file exists. Prefer invoking the skill with `/` rather than cloning OpenSpec’s duplicated command-plus-skill files.
 
 ## Invocation
 
@@ -108,7 +108,8 @@ Typical orientation (not a mandatory command sequence): explore → propose → 
 
 When a later change creates a framework-owned skill:
 
-- Path: `.cursor/skills/sdd-<procedure>/SKILL.md` in the **project** Cursor tree.
+- Source path: `assets/cursor/skills/sdd-<procedure>/SKILL.md` in this repository.
+- Installed path: `.cursor/skills/sdd-<procedure>/SKILL.md` in the consuming project's Cursor tree after copy/pin.
 - Not distributed as a user-level skill (`~/.cursor/skills/`).
 - Not homed in Cursor’s internal skill directories as the framework location.
 - Optional supporting reference files stay one level deep from `SKILL.md`.
@@ -127,7 +128,7 @@ A mandatory product prefix is not required by this operating model. See [Cursor 
 
 ## Catalog status
 
-This operating model does not require any `sdd-*` skill file or `.cursor/skills/sdd-*` directory to exist. Empty stubs are not a catalog. The first framework-owned skills are a later OpenSpec change.
+This operating model does not require any `sdd-*` skill file or `assets/cursor/skills/` directory to exist. Empty stubs are not a catalog. The first framework-owned skills are a later OpenSpec change.
 
 The following name is a **non-normative example** of how `sdd-<procedure>` might look. It is not an asset to create in this change:
 
