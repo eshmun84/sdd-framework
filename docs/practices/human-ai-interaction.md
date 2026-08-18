@@ -2,7 +2,7 @@
 
 This document is the authoritative **practice** for how humans communicate intent, context, constraints, and expected outcomes to AI-assisted development workflows.
 
-It is not an architecture layer. The four-layer model in [architecture overview](../architecture/overview.md) is unchanged. This page does not replace [Cursor integration](../architecture/cursor-integration.md), [agent system](../architecture/agent-system.md), [skill system](../architecture/skill-system.md), or [OpenSpec lifecycle](../lifecycle/openspec-workflow.md). It points at those pages instead of copying them.
+It is not an architecture layer. The four-layer model in [architecture overview](../architecture/overview.md) is unchanged. This page does not replace [Cursor integration](../architecture/cursor-integration.md), [agent system](../architecture/agent-system.md), [skill system](../architecture/skill-system.md), [OpenSpec lifecycle](../lifecycle/openspec-workflow.md), or [workflow system](../architecture/workflow-system.md). It points at those pages instead of copying them. Collaboration stages, gates, and review as a change-level stage live on the workflow page. This page remains how prompts initiate work.
 
 This page does not create prompt files, a prompt catalog, templates, or `sdd-*` Cursor assets. Absence of those files is valid.
 

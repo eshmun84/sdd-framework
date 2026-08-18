@@ -59,6 +59,8 @@ How SDD rules are justified, activated, structured, and evolved is defined in [r
 
 How humans communicate intent to AI tools is defined in [human-AI interaction](../practices/human-ai-interaction.md). That page is a practice, not a fifth architecture layer. This overview does not reproduce it.
 
+How humans, optional planning assistants, Cursor, OpenSpec, and implementation collaborate through a change is defined in [workflow system](workflow-system.md). That page is an operating model, not a fifth architecture layer. This overview does not reproduce it.
+
 A custom `sdd-*` catalog is a later change; its absence is expected.
 
 ## Documentation vs specifications
@@ -70,4 +72,4 @@ A custom `sdd-*` catalog is a later change; its absence is expected.
 | `README.md` | Human entrypoint |
 | `AGENTS.md` | AI-agent entrypoint |
 
-See [Cursor integration](cursor-integration.md) for the component constitution, [agent system](agent-system.md) for the agent operating model, [skill system](skill-system.md) for the skill operating model, [rule system](rule-system.md) for the rule operating model, [adoption](adoption.md) for how other repositories consume this baseline, [lifecycle](../lifecycle/openspec-workflow.md) for how this repository uses OpenSpec, and [human-AI interaction](../practices/human-ai-interaction.md) for how humans instruct AI tools.
+See [Cursor integration](cursor-integration.md) for the component constitution, [agent system](agent-system.md) for the agent operating model, [skill system](skill-system.md) for the skill operating model, [rule system](rule-system.md) for the rule operating model, [workflow system](workflow-system.md) for the change collaboration operating model, [adoption](adoption.md) for how other repositories consume this baseline, [lifecycle](../lifecycle/openspec-workflow.md) for how this repository uses OpenSpec, and [human-AI interaction](../practices/human-ai-interaction.md) for how humans instruct AI tools.

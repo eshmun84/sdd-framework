@@ -2,7 +2,7 @@
 
 This repository uses the native OpenSpec `spec-driven` schema and the native OpenSpec change lifecycle. The SDD Framework does not fork a custom schema in this foundation and does not redefine OpenSpec command semantics.
 
-Authoritative command behavior lives in the vendor-managed Cursor assets (`opsx-*` commands and `openspec-*` skills). This page describes the installed surface and a typical orientation of work; it does not replace those files.
+Authoritative command behavior lives in the vendor-managed Cursor assets (`opsx-*` commands and `openspec-*` skills). This page describes the installed surface and a typical orientation of work; it does not replace those files. How participants collaborate through a change — stages, gates, review, and durable versus session information — is defined in [workflow system](../architecture/workflow-system.md). This page does not own that collaboration model.
 
 ## Change flow
 

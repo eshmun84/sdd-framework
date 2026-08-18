@@ -1,6 +1,6 @@
 # Working agreements
 
-This document is the authoritative governance for changing the SDD Framework. Root entrypoints point here; they do not reproduce these agreements in full.
+This document is the authoritative governance for changing the SDD Framework. Root entrypoints point here; they do not reproduce these agreements in full. The shared collaboration model — stages, participants, gates, and review — lives in [workflow system](../architecture/workflow-system.md). This page is how *this* repository applies that model; it does not own a second copy.
 
 ## What may change here
 

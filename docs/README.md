@@ -12,6 +12,7 @@ This is the documentation index for the SDD Framework.
 - [Agent system](architecture/agent-system.md) — SDD agent operating model (identity, creation criteria, boundaries, lifecycle)
 - [Skill system](architecture/skill-system.md) — SDD skill operating model (identity, creation criteria, invocation, lifecycle)
 - [Rule system](architecture/rule-system.md) — SDD rule operating model (identity, creation criteria, activation, lifecycle)
+- [Workflow system](architecture/workflow-system.md) — SDD change collaboration operating model (stages, participants, gates)
 - [Project adoption](architecture/adoption.md) — copy/pin adoption contract for consuming projects
 - [OpenSpec lifecycle](lifecycle/openspec-workflow.md) — native change workflow used in this repository
 - [Working agreements](governance/working-agreements.md) — how framework changes are specified, reviewed, and archived

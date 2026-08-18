@@ -19,6 +19,7 @@ It is **not** a product codebase. Do not treat it as an application. Do not intr
 | Agent operating model | [docs/architecture/agent-system.md](docs/architecture/agent-system.md) |
 | Skill operating model | [docs/architecture/skill-system.md](docs/architecture/skill-system.md) |
 | Rule operating model | [docs/architecture/rule-system.md](docs/architecture/rule-system.md) |
+| Change collaboration model | [docs/architecture/workflow-system.md](docs/architecture/workflow-system.md) |
 | How other repos adopt this | [docs/architecture/adoption.md](docs/architecture/adoption.md) |
 | OpenSpec workflow | [docs/lifecycle/openspec-workflow.md](docs/lifecycle/openspec-workflow.md) |
 | Human-AI interaction | [docs/practices/human-ai-interaction.md](docs/practices/human-ai-interaction.md) |
@@ -26,7 +27,7 @@ It is **not** a product codebase. Do not treat it as an application. Do not intr
 
 ## How OpenSpec is used
 
-Framework changes **must** follow the native OpenSpec lifecycle: explore → propose → apply → sync → archive. Use the installed `/opsx-*` commands. Do not bypass proposal, specification, and task artifacts. Do not redefine OpenSpec command semantics.
+Framework changes **must** use the native OpenSpec lifecycle and **must not** bypass proposal, specification, and task artifacts (include design when architecture decisions are needed). The typical orientation is explore → propose → apply → sync → archive; that arrow is not a mandatory command sequence. Use the installed `/opsx-*` commands. Do not redefine OpenSpec command semantics. Collaboration stages, gates, and review are defined in [workflow system](docs/architecture/workflow-system.md).
 
 This repository's OpenSpec specifications describe the **framework only**. Consuming-project product specifications **must not** be written here.
 
