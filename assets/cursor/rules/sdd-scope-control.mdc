@@ -1,0 +1,18 @@
+---
+description: Implementation of an approved OpenSpec change must stay inside that change; do not add requirements, tasks, or unsolicited improvements.
+alwaysApply: true
+---
+
+# Scope Control
+
+Implementation of an approved OpenSpec change in this repository's OpenSpec workspace must stay inside that change's proposal, specifications, design when present, tasks, and non-goals.
+
+Do not add requirements that are not in the approved change. Do not add new tasks during Apply.
+
+Do not perform unsolicited improvements the approved contract does not oblige. Mechanical edits the contract obliges remain allowed. Checking off existing tasks remains Apply.
+
+Work that would leave that bound is recorded through the existing OpenSpec change lifecycle, not applied from the implementation prompt. If this repository has no OpenSpec workspace yet, still do not treat the prompt as authorization to expand implementation beyond an approved change.
+
+This file reminds that existing contract. OpenSpec specifications remain the source of truth.
+
+Authoritative methodology (page titles, not this file): Workflow system. Documentation root is `docs/` here and `docs/sdd-framework/` after copy/pin of the SDD Framework baseline.

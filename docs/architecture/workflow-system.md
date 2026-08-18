@@ -185,6 +185,18 @@ Findings refer to existing specifications or tasks. They must not invent a secon
 - **Incomplete apply** must be completed or explicitly accepted as incomplete before archive.
 - **Contract drift** during implementation requires `/opsx-update` or a new change. Prefer a new change over expanding an in-flight change past its non-goals.
 
+## Apply-time scope control
+
+An approved OpenSpec change in the **current** repository's OpenSpec workspace is the bound on allowed implementation work. That bound is the change's proposal (including its scope and non-goals), its specifications, its design when present, and its tasks. OpenSpec remains the requirement contract for that bound.
+
+Apply implements that contract. It does not add requirements, design decisions, or task items that are not already in the approved change. Checking off existing tasks is Apply. Adding new task items is update or a new change, not Apply. Do not apply those additions from the implementation prompt.
+
+Apply does not include adjacent improvements, cleanup, or refactors that the approved contract does not oblige. Mechanical edits that the contract obliges remain in-scope Apply work.
+
+When extra work discovered during Apply should remain true and is not in the approved change, record it through update or a new change. Prefer a new change over expanding an in-flight change past its non-goals. Do not apply that extra work from Apply.
+
+This page does not define Apply scope as a file allowlist, path inventory, CODEOWNERS map, or project-management backlog. Scope is the approved change's contract artifacts.
+
 ## Independent OpenSpec universes
 
 The same collaboration stages apply in this repository and in consuming projects that use OpenSpec. The content and the OpenSpec workspace differ.
