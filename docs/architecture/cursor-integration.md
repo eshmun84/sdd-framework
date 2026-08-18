@@ -2,9 +2,9 @@
 
 This document is the authoritative Cursor **component constitution** for the SDD Framework. It defines what `AGENTS.md`, rules, skills, commands, and agents are, when each should exist, and how they relate to OpenSpec and consuming projects.
 
-It does not replace [architecture overview](overview.md) (four-layer model and asset ownership), [agent system](agent-system.md) (agent operating model), [skill system](skill-system.md) (skill operating model), [rule system](rule-system.md) (rule operating model), or [OpenSpec lifecycle](../lifecycle/openspec-workflow.md) (vendor command behavior). Root entrypoints summarize or link here; they do not own a second copy.
+It does not replace [architecture overview](overview.md) (four-layer model and asset ownership), [agent system](agent-system.md) (agent operating model), [skill system](skill-system.md) (skill operating model), [rule system](rule-system.md) (rule operating model), [asset lifecycle](asset-lifecycle.md) (how assets are created and retired), or [OpenSpec lifecycle](../lifecycle/openspec-workflow.md) (vendor command behavior). Root entrypoints summarize or link here; they do not own a second copy.
 
-Absence of a framework-owned `sdd-*` catalog is valid. This page is the constitution later catalog changes must follow. It is not permission to create those files now.
+Absence of a framework-owned `sdd-*` catalog is valid. This page is the constitution later catalog changes must follow. How those files are classified, created, published, and retired is defined in [asset lifecycle](asset-lifecycle.md). It is not permission to create those files now.
 
 ## Component stack
 
@@ -162,7 +162,7 @@ Do not create `sdd-*` commands or skills whose purpose is to replace, wrap, or r
 
 ## Catalog status
 
-This constitution does not require any `sdd-*` rule, skill, command, or agent file to exist. Empty stubs are not a catalog. The first framework-owned Cursor assets are a later OpenSpec change.
+This constitution does not require any `sdd-*` rule, skill, command, or agent file to exist. Empty stubs are not a catalog. The first framework-owned Cursor assets are a later OpenSpec change that must follow [asset lifecycle](asset-lifecycle.md).
 
 The following names are **non-normative examples** of how `sdd-*` might look. They are not assets to create in this change:
 

@@ -137,7 +137,7 @@ Rules **accumulate** in context. They must not invoke other rules as steps. Over
 
 ## Lifecycle
 
-Creating, changing, or deprecating a framework-owned rule requires an OpenSpec change in this repository. Silent addition, in-place product overwrite, or undocumented deletion is not permitted.
+Creating, changing, or deprecating a framework-owned rule requires an OpenSpec change in this repository. Silent addition, in-place product overwrite, or undocumented deletion is not permitted. Shared classification, publication, adoption, and retirement are defined in [asset lifecycle](asset-lifecycle.md). This page does not own a second copy of that model.
 
 A later change that implements a rule must record:
 

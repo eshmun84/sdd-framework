@@ -98,7 +98,7 @@ A valid SDD skill has a narrow purpose. It points at `docs/` instead of copying 
 
 ## Lifecycle
 
-Creating, changing, or deprecating a framework-owned skill requires an OpenSpec change in this repository. Silent addition, in-place product overwrite, or undocumented deletion is not permitted.
+Creating, changing, or deprecating a framework-owned skill requires an OpenSpec change in this repository. Silent addition, in-place product overwrite, or undocumented deletion is not permitted. Shared classification, publication, adoption, and retirement are defined in [asset lifecycle](asset-lifecycle.md). This page does not own a second copy of that model.
 
 A later change that implements a skill must record why it is a skill rather than a rule, agent, documentation page, or vendor OpenSpec asset.
 

@@ -91,7 +91,7 @@ Cursor parent delegation is sufficient. Background or cloud execution is a Curso
 
 ## Lifecycle
 
-Creating, changing, or deprecating a framework-owned agent requires an OpenSpec change in this repository. Silent addition, in-place product overwrite, or undocumented deletion is not permitted.
+Creating, changing, or deprecating a framework-owned agent requires an OpenSpec change in this repository. Silent addition, in-place product overwrite, or undocumented deletion is not permitted. Shared classification, publication, adoption, and retirement are defined in [asset lifecycle](asset-lifecycle.md). This page does not own a second copy of that model.
 
 A later change that implements an agent must record:
 

@@ -20,6 +20,7 @@ It is **not** a product codebase. Do not treat it as an application. Do not intr
 | Skill operating model | [docs/architecture/skill-system.md](docs/architecture/skill-system.md) |
 | Rule operating model | [docs/architecture/rule-system.md](docs/architecture/rule-system.md) |
 | Change collaboration model | [docs/architecture/workflow-system.md](docs/architecture/workflow-system.md) |
+| How framework Cursor assets evolve | [docs/architecture/asset-lifecycle.md](docs/architecture/asset-lifecycle.md) |
 | How other repos adopt this | [docs/architecture/adoption.md](docs/architecture/adoption.md) |
 | OpenSpec workflow | [docs/lifecycle/openspec-workflow.md](docs/lifecycle/openspec-workflow.md) |
 | Human-AI interaction | [docs/practices/human-ai-interaction.md](docs/practices/human-ai-interaction.md) |
@@ -34,7 +35,7 @@ This repository's OpenSpec specifications describe the **framework only**. Consu
 ## Boundaries you must respect
 
 - Do not rename, wrap, or edit vendor OpenSpec Cursor assets (`opsx-*` commands, `openspec-*` skills) to add framework methodology. Do not treat this repository as the distribution channel for those vendor files.
-- Future framework-owned Cursor assets use the `sdd-*` namespace and follow [Cursor integration](docs/architecture/cursor-integration.md), [agent system](docs/architecture/agent-system.md), [skill system](docs/architecture/skill-system.md), and [rule system](docs/architecture/rule-system.md). Do not invent that catalog unless a later OpenSpec change specifies it.
+- Future framework-owned Cursor assets use the `sdd-*` namespace and follow [Cursor integration](docs/architecture/cursor-integration.md), [agent system](docs/architecture/agent-system.md), [skill system](docs/architecture/skill-system.md), [rule system](docs/architecture/rule-system.md), and [asset lifecycle](docs/architecture/asset-lifecycle.md). Do not invent that catalog unless a later OpenSpec change specifies it.
 - Do not add an installer, custom schema, or application code unless the current change specifies it.
 - Do not couple this framework to a consuming project's runtime or production deployment. Consuming projects copy/pin a published subset; they must not receive this repository's `AGENTS.md`, `README.md`, or `openspec/` as adopted baseline. Details: [adoption](docs/architecture/adoption.md).
 

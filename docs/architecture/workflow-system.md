@@ -2,7 +2,7 @@
 
 This document is the authoritative **workflow operating model** for the SDD Framework. It defines how humans, optional planning assistants, Cursor, OpenSpec, and implementation work collaborate through one change — from intent to archived contract.
 
-It does not replace [architecture overview](overview.md) (four-layer model), [Cursor integration](cursor-integration.md) (what a rule, skill, command, or agent *is*), [agent system](agent-system.md), [skill system](skill-system.md), [rule system](rule-system.md), [adoption](adoption.md), [OpenSpec lifecycle](../lifecycle/openspec-workflow.md) (vendor command surface), [human-AI interaction](../practices/human-ai-interaction.md) (how prompts initiate work), or [working agreements](../governance/working-agreements.md) (this-repository governance). Those pages keep their jobs. This page is how they operate together. It is not a fifth architecture layer.
+It does not replace [architecture overview](overview.md) (four-layer model), [Cursor integration](cursor-integration.md) (what a rule, skill, command, or agent *is*), [agent system](agent-system.md), [skill system](skill-system.md), [rule system](rule-system.md), [asset lifecycle](asset-lifecycle.md) (how Cursor assets evolve), [adoption](adoption.md), [OpenSpec lifecycle](../lifecycle/openspec-workflow.md) (vendor command surface), [human-AI interaction](../practices/human-ai-interaction.md) (how prompts initiate work), or [working agreements](../governance/working-agreements.md) (this-repository governance). Those pages keep their jobs. This page is how they operate together. It is not a fifth architecture layer.
 
 This page does not create `.cursor/` assets, `sdd-*` catalog files, prompt libraries, or automation. Absence of those files is valid. It is not permission to wrap `/opsx-*`.
 
@@ -200,4 +200,4 @@ A consuming project that has not installed OpenSpec cannot run this change lifec
 
 This operating model does not require any `sdd-*` rule, skill, command, or agent file to exist. It does not introduce a workflow engine, orchestrator runtime, hooks, MCP integration, plugin, prompt library, or automation that runs the lifecycle. Empty stubs are not a catalog.
 
-Humans invoke stages. Cursor executes the named vendor command. Later skills, agents, or rules may operate inside a stage. They must not own explore, propose, apply, update, sync, or archive. Use the vendor `opsx-*` / `openspec-*` surface.
+Humans invoke stages. Cursor executes the named vendor command. Later skills, agents, or rules may operate inside a stage. They must not own explore, propose, apply, update, sync, or archive. Use the vendor `opsx-*` / `openspec-*` surface. How those later files are classified, created, and retired is defined in [asset lifecycle](asset-lifecycle.md).

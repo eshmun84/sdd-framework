@@ -4,6 +4,8 @@ This document is the authoritative adoption contract. It is architectural. No in
 
 Consuming projects take a **versioned baseline by copy/pin of a controlled subset**. They do not consume this repository as a git submodule, git subtree, package, or runtime dependency. An OpenSpec store is not the Cursor-asset distribution model; it may be considered later for spec referencing only.
 
+How a framework-owned Cursor asset becomes eligible to copy is defined in [asset lifecycle](asset-lifecycle.md). This page does not own that operating model.
+
 Manual copy of the published subset is valid until a later change automates the same inventory.
 
 ## Official model
@@ -137,7 +139,7 @@ discover → adopt → configure → develop → update
 | **Develop** | Product work through that project's OpenSpec lifecycle. Copied `sdd-*` assets stay read-only. |
 | **Update** | Take a newer tag; replace framework-owned copied paths; review the diff; update the pin. |
 
-An installer may later automate this sequence. It must not invent a different distribution model.
+An installer may later automate this sequence. It must not invent a different distribution model. How `sdd-*` files are created, deprecated, and retired before they appear in a baseline is defined in [asset lifecycle](asset-lifecycle.md).
 
 ## Development versus production
 
